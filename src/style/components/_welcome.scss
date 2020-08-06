@@ -1,0 +1,90 @@
+#jsz-welcome-screen {
+	width: 100%;
+	height: calc(100vh - 56.5px);
+	font-size: 26px;
+}
+
+.jsz-blue-letter {
+	color: $jsz-light-blue;
+}
+
+#jsz-name {
+	font-size: 2em;
+	font-weight: 900;
+}
+
+#jsz-desc {
+	font-size: 4em;
+	font-weight: 900;
+}
+
+#jsz-welcome-text {
+	width: fit-content;
+	position: relative;
+	top: 30%;
+}
+
+#jsz-welcome-img {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+	background-image: url(../assets/welcome.jpg);
+
+	// &::before {
+	// 	content: '';
+	// 	background: rgba(0, 0, 0, .5);
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// }
+}
+
+@media only screen and (max-width: 720px) {
+    #jsz-welcome-img {
+		width: 100%;
+	}
+	#jsz-welcome-screen {
+		font-size: 18px;
+	}
+	#jsz-welcome-text {
+		// background: inherit;
+		// overflow: hidden;
+		// // border-radius: 8px;s
+		// z-index: 1;
+		// // border: 1px solid rgba(255, 255, 255, .5);
+		// padding: 30px;
+	
+		// &::after {
+		// 	z-index: -1;
+		// 	content: '';
+		// 	background: rgba(255, 255, 255, .7);
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	right: 0;
+		// 	bottom: 0;
+		// 	// box-shadow: inset 0 0px 1000px rgba(255, 255, 255, 1);
+		// 	filter: blur(1px);
+		// 	// margin: -0px;
+		// }
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	#jsz-welcome-screen {
+		font-size: 14px;
+	}
+}
+@media only screen and (max-width: 420px) {
+	#jsz-welcome-screen {
+		font-size: 12px;
+	}
+}
