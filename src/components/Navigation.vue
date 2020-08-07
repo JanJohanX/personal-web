@@ -2,9 +2,9 @@
 	<header>
 		<nav>
 			<ul class="jsz-nav-links">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Work</a></li>
-				<li><a href="#">Skills</a></li>
+				<li><a href="#jsz-welcome-screen">Home</a></li>
+				<li><a href="#jsz-work-screen">Work</a></li>
+				<li><a href="#jsz-skills-screen">Skills</a></li>
 				<li><a href="#">About</a></li>
 			</ul>
 		</nav>
@@ -40,6 +40,16 @@ export default {
 					menuOpen = false;
 				}
 			})
+		},
+		smoothScroll(e) {
+			e.preventDefault();
+			const href = e.target.getAttribute("href");
+			const offsetTop = document.querySelector(href).offsetTop;
+			
+			scroll({
+				top: offsetTop,
+				behavior: "smooth"
+			});
 		}
 	},
 	created() {
@@ -48,6 +58,11 @@ export default {
 	},
 	mounted() {
 		this.toggleNavMenu();
+		const links = document.querySelectorAll(".jsz-nav-links a");
+ 
+		for (const link of links) {
+			link.addEventListener("click", this.smoothScroll);
+		}
 	}
 }
 </script>

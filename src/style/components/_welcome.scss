@@ -1,6 +1,7 @@
 #jsz-welcome-screen {
 	width: 100%;
 	height: calc(100vh - 56.5px);
+	// margin-top: 56.5px;
 	font-size: 26px;
 }
 
@@ -35,16 +36,6 @@
     background-repeat: no-repeat;
     background-attachment: scroll;
 	background-image: url(../assets/welcome.jpg);
-
-	// &::before {
-	// 	content: '';
-	// 	background: rgba(0, 0, 0, .5);
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	right: 0;
-	// 	bottom: 0;
-	// }
 }
 
 @media only screen and (max-width: 720px) {
@@ -53,28 +44,6 @@
 	}
 	#jsz-welcome-screen {
 		font-size: 18px;
-	}
-	#jsz-welcome-text {
-		// background: inherit;
-		// overflow: hidden;
-		// // border-radius: 8px;s
-		// z-index: 1;
-		// // border: 1px solid rgba(255, 255, 255, .5);
-		// padding: 30px;
-	
-		// &::after {
-		// 	z-index: -1;
-		// 	content: '';
-		// 	background: rgba(255, 255, 255, .7);
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left: 0;
-		// 	right: 0;
-		// 	bottom: 0;
-		// 	// box-shadow: inset 0 0px 1000px rgba(255, 255, 255, 1);
-		// 	filter: blur(1px);
-		// 	// margin: -0px;
-		// }
 	}
 }
 
