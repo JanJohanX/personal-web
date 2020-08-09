@@ -11,7 +11,7 @@ export default {
 	name: 'Skills',
 	data() {
 		return {
-			skillsArr: ['Vue.js', 'Nuxt.js', 'JavaScript', 'HTML5', 'CSS', 'Sass/SCSS', 'PHP', 'Node.js', 'MySQL', 'MariaDB', 'Handlebars', 'Express', 'MongoDB', 'JWT', 'bcrypt.js', 'Figma', 'F3 framework', 'phpMyAdmin']
+			skillsArr: ['Vue.js', 'Nuxt.js', 'JavaScript', 'HTML5', 'CSS', 'Sass/SCSS', 'PHP', 'Node.js', 'MySQL', 'MariaDB', 'Handlebars', 'Express', 'MongoDB', 'JWT', 'bcrypt.js', 'Figma', 'F3 framework', 'phpMyAdmin', 'Git', 'SVN']
 		}
 	},
 	mounted() {

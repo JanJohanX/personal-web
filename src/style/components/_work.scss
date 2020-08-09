@@ -51,3 +51,18 @@
 	color: #333;
 	transition: all .5s;
 }
+
+@media only screen and (max-width: 720px) {
+	// #jsz-work-grid {
+	// 	display: grid;
+	// 	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	// 	grid-gap: 10px;
+	// }
+
+	.jsz-work-container {
+	
+		a {
+			font-size: 3em;
+		}
+	}
+}
