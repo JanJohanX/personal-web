@@ -17,6 +17,11 @@
 <script>
 export default {
 	name: 'Navigation',
+	data() {
+		return {
+			menuOpen: false,
+		}
+	},
 	methods: {
 		scrollEffect: () => {
 			window.addEventListener('scroll', function() {
@@ -25,26 +30,27 @@ export default {
 				else document.getElementsByTagName('header')[0].classList.remove('jsz-scroll');
 			})
 		},
-		toggleNavMenu: () => {
-			const menuBtn = document.getElementById('navToggler');
-			const nav = document.getElementsByTagName('nav')[0];
-			let menuOpen = false;
-			menuBtn.addEventListener('click', () => {
-				if (!menuOpen) {
-					menuBtn.classList.add('open');
-					nav.classList.add('opened');
-					menuOpen = true;
-				} else {
-					menuBtn.classList.remove('open');
-					nav.classList.remove('opened');
-					menuOpen = false;
-				}
+		toggleNavMenu() {
+			document.getElementById('navToggler').addEventListener('click', () => {
+				if (!this.menuOpen) this.openMenu();
+				else this.closeMenu();
 			})
+		},
+		openMenu() {
+			document.getElementById('navToggler').classList.add('open');
+			document.getElementsByTagName('nav')[0].classList.add('opened');
+			this.menuOpen = true;
+		},
+		closeMenu() {
+			document.getElementById('navToggler').classList.remove('open');
+			document.getElementsByTagName('nav')[0].classList.remove('opened');
+			this.menuOpen = false;
 		},
 		smoothScroll(e) {
 			e.preventDefault();
 			const href = e.target.getAttribute("href");
 			const offsetTop = document.querySelector(href).offsetTop;
+			this.closeMenu();
 			
 			scroll({
 				top: offsetTop,
